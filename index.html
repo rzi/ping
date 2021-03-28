@@ -68,6 +68,9 @@
             myChart.data.datasets.forEach((dataset) => {
               dataset.data.push(data);
             });
+            myChart.data.datasets.forEach((dataset) => {
+              dataset.backgroundColor.push("LawnGreen");
+            });
             myChart.update();
           });
         }, 1000);
@@ -89,6 +92,7 @@
         myChart.update();
       }
       let myTable = [];
+      let myColor = [];
       var settings = {
         timeout: 2000, // Optional.
         logError: true, // Optional.
@@ -141,6 +145,7 @@
               label: "Pingi",
               data: myTable,
               borderWidth: 1,
+              backgroundColor: myColor,
             },
           ],
         },
