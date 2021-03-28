@@ -62,7 +62,7 @@
             }
             document.getElementById("ping-input").innerHTML = data + " ms";
             console.log(`data: ${data}`);
-            var todayDate = new Date().toISOString().slice(0, 19);
+            var todayDate = new Date().toLocaleString().slice(0, 19);
             console.log(todayDate);
             myChart.data.labels.push(todayDate);
             myChart.data.datasets.forEach((dataset) => {
